@@ -1,63 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Today's Notes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: system-ui, Arial, sans-serif;
-      background: #f2f4f7;
-      margin: 0;
-      padding: 16px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    p {
-      text-align: center;
-      color: #444;
-      margin-bottom: 20px;
-    }
-    .note {
-      display: block;
-      width: 100%;
-      max-width: 720px;
-      margin: 0 auto 14px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      background: #fff;
-    }
-    .footer {
-      text-align: center;
-      font-size: 12px;
-      color: #666;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-
-<h1>Today's Notes</h1>
-<p>May be uploaded later. If not after 6 pm, will be uploaded tomorrow.</p>
-
 <script>
-  const folder = "main/today/";
-  const maxImages = 50;
+  const folder = "8Dnotes/today/";
+  const maxFiles = 60;
+  const exts = ["jpg", "jpeg", "png", "pdf"];
 
-  for (let i = 1; i <= maxImages; i++) {
-    const img = document.createElement("img");
-    img.src = folder + i + ".jpg";
-    img.className = "note";
-    img.onerror = () => img.remove();
-    document.body.appendChild(img);
+  for (let i = 1; i <= maxFiles; i++) {
+    exts.forEach(ext => {
+      if (ext === "pdf") {
+        const link = document.createElement("a");
+        link.href = folder + i + "." + ext;
+        link.textContent = "Open PDF " + i;
+        link.style.display = "block";
+        link.style.maxWidth = "720px";
+        link.style.margin = "10px auto";
+        link.style.textAlign = "center";
+        link.target = "_blank";
+        document.body.appendChild(link);
+      } else {
+        const img = document.createElement("img");
+        img.src = folder + i + "." + ext;
+        img.className = "note";
+        img.onerror = () => img.remove();
+        document.body.appendChild(img);
+      }
+    });
   }
 </script>
-
-<div class="footer">
-  Class Notes • Private Use Only
-</div>
-
-</body>
-</html>
