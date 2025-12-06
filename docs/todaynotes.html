@@ -37,43 +37,13 @@
 
 <h1>Today's Notes</h1>
 
-<!-- AUTO-LOAD IMAGES -->
-<div id="notes"></div>
+<p style="text-align:center">Images may be uploaded after class</p>
 
-<script>
-  const folder = "8Dnotes/today/";
-  const maxFiles = 50;
-  const exts = ["jpg", "jpeg", "png", "pdf"];
-  const container = document.getElementById("notes");
-
-  for (let i = 1; i <= maxFiles; i++) {
-    exts.forEach(ext => {
-      const path = folder + i + "." + ext;
-
-      if (ext === "pdf") {
-        fetch(path, { method: "HEAD" })
-          .then(r => {
-            if (!r.ok) return;
-            const link = document.createElement("a");
-            link.href = path;
-            link.textContent = "Open PDF " + i;
-            link.target = "_blank";
-            link.style.display = "block";
-            link.style.margin = "10px auto";
-            link.style.textAlign = "center";
-            container.appendChild(link);
-          })
-          .catch(() => {});
-      } else {
-        const img = new Image();
-        img.src = path;
-        img.className = "note";
-        img.onload = () => container.appendChild(img);
-        // do NOTHING on error
-      }
-    });
-  }
-</script>
+<img class="note" src="8Dnotes/today/1.jpg">
+<img class="note" src="8Dnotes/today/2.jpg">
+<img class="note" src="8Dnotes/today/3.jpg">
+<img class="note" src="8Dnotes/today/4.jpg">
+<img class="note" src="8Dnotes/today/5.jpg">
 
 <div class="footer">
   Class Notes • Private Use Only
