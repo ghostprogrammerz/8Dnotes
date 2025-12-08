@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <style>
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      background: #f2f4f7;
+      margin: 0;
+      padding: 16px;
+    }
+
+    /* NAVBAR */
+    .nav {
+      background: #2c6bed;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin: 16px 0 8px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    /* NOTICE CARD */
+    .notice-card {
+      max-width: 720px;
+      margin: 0 auto 14px;
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+
+    .notice-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .notice-date {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .notice-text {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .notice-btn {
+      display: block;
+      margin-top: 12px;
+      padding: 14px;
+      text-align: center;
+
+      background: #2c6bed;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+
+      border-radius: 8px;
+      min-height: 48px;
+    }
+
+    .notice-btn:active {
+      opacity: 0.9;
+    }
+
+    .empty {
+      text-align: center;
+      color: #666;
+      font-weight: 600;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a href="todaynotes.html">Todays notes</a>
+  <a href="previousnotes.html">Previous notes</a>
+  <a href="notices.html">Notices</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+</div>
+
+<h1>Notices</h1>
+<p class="subtitle">Official class & school announcements</p>
+
+<!-- NOTICE WITH PDF -->
+<div class="notice-card">
+  <div class="notice-title">Unit Test Schedule</div>
+  <div class="notice-date">6 Dec 2025</div>
+
+  </a>
+</div>
+
+<!-- NOTICE WITH TEXT ONLY -->
+<div class="notice-card">
+  <div class="notice-title">Second Term Exams</div>
+  <div class="notice-date">till 18 dec</div>
+  <div class="notice-text">
+ study for your exams
+  </div>
+</div>
+
+<!--  (use when nothing exists) -->
+<!--
+<div class="empty">
+  No new notices at the moment.
+</div>
+-->
+
+</body>
+</html>
