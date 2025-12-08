@@ -15,23 +15,26 @@
     }
 
 .nav {
-      background: #2c6bed;
-      padding: 12px;
-    }
+  background: #2c6bed;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
 
-    .nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 14px;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-weight: 600;
-      display: inline-block;
-    }
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+}
 
-    .nav a:hover {
-      background: rgba(255,255,255,0.2);
-    }
+.nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
 
     
     h1 {
@@ -88,6 +91,16 @@
   </style>
 </head>
 <body>
+
+  <!-- NAVBAR -->
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a href="todaynotes.html">Today</a>
+  <a href="previousnotes.html">Previous</a>
+  <a href="notices.html">Notices</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+</div>
 
 <h1>Today's Notes</h1>
 <p style="text-align:center">PDF notes as dictated in class</p>
